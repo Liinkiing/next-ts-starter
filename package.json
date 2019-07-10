@@ -1,0 +1,43 @@
+{
+  "name": "next-ts-starter",
+  "version": "1.0.0",
+  "description": "A simple Next.JS powered typescript starter with styled components",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": ["starter", "template", "styled-components", "next", "nextjs", "react", "typescript"],
+  "repository": {
+    "url": "https://github.com/Liinkiing/next-ts-starter",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/Liinkiing/next-ts-starter/issues"
+  },
+  "author": "Omar Jbara <omar.jbara2@gmail.com>",
+  "dependencies": {
+    "next": "^9.0.0",
+    "polished": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.1",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.3"
+  }
+}
