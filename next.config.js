@@ -1,6 +1,12 @@
 const path = require('path')
+const nextEnv = require('next-env')
+const dotenvLoad = require('dotenv-load')
 
-module.exports = {
+dotenvLoad()
+
+const withNextEnv = nextEnv()
+
+module.exports = withNextEnv({
   onDemandEntries: {
     // Make sure entries are not getting disposed.
     maxInactiveAge: 1000 * 60 * 60,
@@ -15,4 +21,4 @@ module.exports = {
     config.resolve.alias['~'] = path.join(__dirname, 'src')
     return config
   },
-}
+})

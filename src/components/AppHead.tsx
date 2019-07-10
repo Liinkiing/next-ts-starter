@@ -36,7 +36,7 @@ const AppHead: React.FC<Props> = ({ title, description, url, socialImage }) => (
 )
 
 AppHead.defaultProps = {
-  title: '',
+  title: process.env.NEXT_STATIC_APP_NAME || '',
   description: defaultDescription,
   url: defaultOGURL,
   socialImage: defaultOGImage,

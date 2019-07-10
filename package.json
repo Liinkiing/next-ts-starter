@@ -7,7 +7,15 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": ["starter", "template", "styled-components", "next", "nextjs", "react", "typescript"],
+  "keywords": [
+    "starter",
+    "template",
+    "styled-components",
+    "next",
+    "nextjs",
+    "react",
+    "typescript"
+  ],
   "repository": {
     "url": "https://github.com/Liinkiing/next-ts-starter",
     "type": "git"
@@ -17,7 +25,9 @@
   },
   "author": "Omar Jbara <omar.jbara2@gmail.com>",
   "dependencies": {
+    "dotenv-load": "^2.0.0",
     "next": "^9.0.0",
+    "next-env": "^1.1.0",
     "polished": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
