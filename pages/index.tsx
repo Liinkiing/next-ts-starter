@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { NextPage } from 'next'
 import styled from 'styled-components'
 import AppHead from '~/components/AppHead'

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const nextEnv = require('next-env')
 const dotenvLoad = require('dotenv-load')
@@ -10,9 +11,6 @@ module.exports = withNextEnv({
   onDemandEntries: {
     // Make sure entries are not getting disposed.
     maxInactiveAge: 1000 * 60 * 60,
-  },
-  experimental: {
-    publicDirectory: true,
   },
   webpack(config, options) {
     config.node = {
