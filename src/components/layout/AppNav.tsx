@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { NextPage } from 'next'
 
-const AppNav: NextPage = () => (
+const AppNav: React.FC = () => (
   <nav>
     <ul>
       <li>
