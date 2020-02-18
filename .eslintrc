@@ -61,7 +61,9 @@
     ],
     "@typescript-eslint/array-type": [
       "error",
-      "array-simple"
+      {
+        "default": "array-simple"
+      }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off"

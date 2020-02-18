@@ -1,6 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import AppNav from '~/components/layout/AppNav'
+import GlobalStyle from '~/styles/global'
 
 class MyApp extends App {
   render() {
@@ -8,6 +9,7 @@ class MyApp extends App {
 
     return (
       <>
+        <GlobalStyle />
         <AppNav />
         <Component {...pageProps} />
       </>
