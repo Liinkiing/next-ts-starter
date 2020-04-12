@@ -1,7 +1,11 @@
-export const dark = '#343740'
-export const red = '#ff5c7c'
-export const green = '#7ec575'
-export const lightGray = '#e8ebf3'
-export const white = '#f8f8f8'
+const colors = {
+  dark: '#343740',
+  red: '#ff5c7c',
+  lightBlue: '#61b5e2',
+  darkBlue: '#2f6587',
+  green: '#7ec575',
+  lightGray: '#e8ebf3',
+  white: '#f8f8f8',
+}
 
-export default { dark, green, red, lightGray, white }
+export default colors
