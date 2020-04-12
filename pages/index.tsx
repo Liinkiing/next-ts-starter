@@ -1,14 +1,12 @@
 import { NextPage } from 'next'
-import styled from 'styled-components'
 import AppHead from '~/components/AppHead'
-
-const IndexInner = styled.div``
+import Page from '~/components/layout/Page'
 
 const Index: NextPage = () => (
-  <IndexInner>
+  <Page>
     <AppHead title="Homepage" />
     <p>Hello from home</p>
-  </IndexInner>
+  </Page>
 )
 
 export default Index

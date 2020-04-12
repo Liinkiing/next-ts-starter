@@ -1,14 +1,12 @@
 import { NextPage } from 'next'
-import styled from 'styled-components'
 import AppHead from '~/components/AppHead'
-
-const AboutInner = styled.div``
+import Page from '~/components/layout/Page'
 
 const About: NextPage = () => (
-  <AboutInner>
+  <Page>
     <AppHead title="About" />
     <p>Hello from about</p>
-  </AboutInner>
+  </Page>
 )
 
 export default About
