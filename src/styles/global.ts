@@ -18,8 +18,4 @@ export default createGlobalStyle`
     ${MAIN_BACKGROUND};
     color: ${props => theme(props).colors.text};
   }
-
-  a {
-    color: ${props => theme(props).colors.link};
-  }
 `

@@ -25,6 +25,7 @@
   },
   "author": "Omar Jbara <omar.jbara2@gmail.com>",
   "dependencies": {
+    "@styled-system/should-forward-prop": "^5.1.5",
     "dotenv-load": "^2.0.0",
     "framer-motion": "^2.0.0-beta.42",
     "next": "^9.3.4",
