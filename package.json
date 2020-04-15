@@ -11,6 +11,8 @@
     "starter",
     "template",
     "styled-components",
+    "styled-system",
+    "framer-motion",
     "next",
     "nextjs",
     "react",
