@@ -8,6 +8,9 @@ const theme: DefaultTheme = {
     background: '#333',
     text: colors.white,
     link: colors.lightBlue,
+    primary: colors.orange,
+    secondary: colors.violet,
+    tertiary: colors.green,
   },
 }
 

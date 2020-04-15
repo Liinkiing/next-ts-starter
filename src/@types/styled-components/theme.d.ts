@@ -14,6 +14,9 @@ declare module 'styled-components' {
       background: string
       text: string
       link: string
+      primary: string
+      secondary: string
+      tertiary: string
     }
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import App from 'next/app'
+import NProgress from '~/components/NProgress'
 import AppNav from '~/components/layout/AppNav'
 import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from 'styled-components'
@@ -13,6 +14,7 @@ class MyApp extends App {
     return (
       <ThemeProvider theme={light}>
         <GlobalStyle />
+        <NProgress color={light.colors.primary} spinner={false} />
         <AppNav />
         <AnimatePresence exitBeforeEnter initial={false}>
           <Component {...pageProps} key={router.route} />

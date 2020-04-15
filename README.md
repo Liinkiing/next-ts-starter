@@ -20,6 +20,9 @@ $ yarn start
 ## Next config
 It comes already configured with some nices plugin. You can see in `next.config.js` what is 
 used. In short, it allows support of importing images files and fonts within webpack. 
+It also comes with NProgress support, by default so it shows a small loading bar in top of 
+the page when loading. You can find the component in `~/components/NProgress.tsx`, and it is used in the
+custom `_app.tsx`
 
 ## Styled component
 The template comes with [styled-components](https://github.com/styled-components/styled-components). 
