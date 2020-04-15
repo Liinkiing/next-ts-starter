@@ -1,7 +1,7 @@
 {
   "name": "next-ts-starter",
   "version": "1.0.0",
-  "description": "A simple Next.JS powered typescript starter with styled components",
+  "description": "A Next.JS powered typescript starter with styled components, styled-system and framer-motion",
   "scripts": {
     "dev": "next",
     "build": "next build",
