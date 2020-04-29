@@ -31,6 +31,7 @@
     }
   },
   "rules": {
+    "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "@typescript-eslint/indent": "off",
     "react/react-in-jsx-scope": "off",
@@ -66,7 +67,8 @@
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-member-accessibility": "off"
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "overrides": []
 }

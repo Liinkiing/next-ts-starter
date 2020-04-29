@@ -10,6 +10,9 @@ const withFonts = require('next-fonts')
 dotenvLoad()
 
 module.exports = withPlugins([withNextEnv, withFonts, withImages], {
+  experimental: {
+    reactRefresh: true,
+  },
   onDemandEntries: {
     // Make sure entries are not getting disposed.
     maxInactiveAge: 1000 * 60 * 60,
