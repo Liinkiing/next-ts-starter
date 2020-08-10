@@ -5,12 +5,13 @@ import baseTheme from '~/styles/themes/base'
 const theme: DefaultTheme = {
   ...baseTheme,
   colors: {
-    background: '#333',
+    ...baseTheme.colors,
+    background: colors.gray[900],
     text: colors.white,
-    link: colors.lightBlue,
-    primary: colors.orange,
-    secondary: colors.violet,
-    tertiary: colors.green,
+    link: colors.blue[400],
+    primary: colors.orange[700],
+    secondary: colors.purple[700],
+    tertiary: colors.green[700],
   },
 }
 
