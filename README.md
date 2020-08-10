@@ -16,13 +16,22 @@ $ yarn build
 
 $ yarn start
 # launch Next start script
+
+$ yarn test
+# launch test suite
+
+$ yarn ts:check
+# check TypeScript
+
+$ yarn lint
+# run ESLint
 ```
 
 ## Next config
 
 It comes already configured with some nice plugin. You can see in `next.config.js` what is
 used. In short, it allows support of importing images files and fonts within webpack.
-It also comes with **NProgress** support, by default so it shows a small loading bar in top of
+It also comes with **NProgress** support by default, so it shows a small loading bar in top of
 the page when loading. You can find the component in `~/components/NProgress.tsx`, and it is used in the
 custom `_app.tsx`
 
@@ -41,7 +50,7 @@ build reusable UI blocks with a great props API and consistent spaces / typograp
 A lot comes from the theme, provided in `~/styles/themes/base.ts` where we define some
 breakpoints, spacings and typography stuff. It allows then the custom `AppBox` component (`~/ui/AppBox`)
 to be aware of your theme and then build something amazing with the primitives.
-By default, this starter provide some basic examples components that uses this pattern, for
+By default, this starter provides some basic examples components that uses this pattern, for
 example the `AppNav` component (`~/components/layout/AppNav`).
 
 ## Framer motion
@@ -49,6 +58,14 @@ example the `AppNav` component (`~/components/layout/AppNav`).
 Again, personal preference here, but the starter comes with framer motion already configured
 to handle Next pages changes and enable some smooth transitions when navigating. You
 can find the default variant used for the page transitions in `~/common/framer.ts`.
+
+## Testing
+
+[Jest](https://github.com/facebook/jest) and [@testing-library/react](https://github.com/testing-library/react-testing-library) is used to run your tests. It comes preconfigured
+with [ts-jest](https://github.com/kulshekhar/ts-jest) so your tests also checks your types.
+You can look the **jest.config.js** and the file **setupTest.ts** to see what's in there.
+[jest-styled-components](https://github.com/styled-components/jest-styled-components) is also used to have deterministic classNames
+within your styled components that you are testing.
 
 ## Aliases
 
@@ -59,6 +76,9 @@ They are 1 defaulted alias, ready to use :
 // ~ refers to src folder
 import { something } from '~/file'
 ```
+
+You can also use for your convenience the global ****DEV**** variable, which is
+injected by webpack with the DefinePlugin (see **next.config.js**).
 
 ## @types and extending modules
 
