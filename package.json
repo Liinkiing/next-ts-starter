@@ -1,7 +1,7 @@
 {
   "name": "next-ts-starter",
   "version": "1.0.0",
-  "description": "A Next.JS powered typescript starter with styled components, styled-system and framer-motion",
+  "description": "A Next.JS powered typescript starter with styled components, styled-system, jest, @testing-library and framer-motion",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -21,6 +21,8 @@
     "next",
     "nextjs",
     "react",
+    "testing",
+    "jest",
     "typescript"
   ],
   "repository": {
