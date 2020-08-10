@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const webpack = require('webpack')
 
-/* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path')
 const dotenvLoad = require('dotenv-load')
 
 const withPlugins = require('next-compose-plugins')
@@ -25,7 +23,7 @@ module.exports = withPlugins([withFonts, withImages], {
         __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
       }),
     )
-    config.resolve.alias['~'] = path.join(__dirname, 'src')
+
     return config
   },
 })
