@@ -26,6 +26,7 @@ const PageInner = styled(motion.div)`
 
 const Page: NextPage<Props> = ({ children, as = 'div', noDefaultTransition = false, ...rest }) =>
   React.createElement(
+    // @ts-ignore
     motion[as],
     {
       exit: 'exit',

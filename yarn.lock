@@ -1479,6 +1479,11 @@
   dependencies:
     csstype "^3.0.2"
 
+"@types/styled-system__should-forward-prop@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@types/styled-system__should-forward-prop/-/styled-system__should-forward-prop-5.1.1.tgz#44df913bbd78ef56b4cab9cb1f91ccd92fd5d7fc"
+  integrity sha512-7A1awFdji4GJ2ZL9NZwTBZ/RinfXGwZf9bqOV3+lUU+nFMGCkHmg8nZMUrzBwFtl6EpA99cKPi6Q60PCleoP0Q==
+
 "@typescript-eslint/eslint-plugin@^3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.8.0.tgz#f82947bcdd9a4e42be7ad80dfd61f1dc411dd1df"

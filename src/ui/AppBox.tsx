@@ -154,10 +154,11 @@ export const Spacing = {
   Xl3: Number(SPACES_SCALES[8].replace('rem', '')) * 16,
 } as const
 
-// @ts-ignore
-const AppBox = styled<AppBoxProps>('div').withConfig({
-  shouldForwardProp,
-})(
+const AppBox = styled('div').withConfig({
+  shouldForwardProp: prop => {
+    return shouldForwardProp(prop)
+  },
+})<AppBoxProps>(
   props => ({
     textTransform: props.uppercase ? 'uppercase' : undefined,
   }),
