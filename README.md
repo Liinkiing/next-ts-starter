@@ -77,7 +77,7 @@ They are 1 defaulted alias, ready to use :
 import { something } from '~/file'
 ```
 
-You can also use for your convenience the global ****DEV**** variable, which is
+You can also use for your convenience the global `__DEV__` variable, which is
 injected by webpack with the DefinePlugin (see **next.config.js**).
 
 ## @types and extending modules
