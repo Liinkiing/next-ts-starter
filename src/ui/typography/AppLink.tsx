@@ -1,22 +1,78 @@
 import React from 'react'
-import AppBox, { AppBoxProps, LineHeight } from '~/ui/AppBox'
-import styled, { css } from 'styled-components'
-import { darken } from 'polished'
+import AppBox, { AppBoxProps, FontWeight, LineHeight } from '~/ui/AppBox'
+import styled, { css, CSSObject } from 'styled-components'
+import Link, { LinkProps } from 'next/link'
 
-const AppLinkInner = styled(AppBox)`
-  ${({ theme }) => css`
-    transition: color 0.2s ease;
-    color: ${theme.colors.link};
-    &:hover {
-      cursor: pointer;
-      color: ${darken(0.1, theme.colors.link)};
-    }
-  `}
+interface OwnProps {
+  readonly applyActiveLinkStyles?: boolean
+  readonly applyFilterOnHover?: boolean
+  readonly activeLinkStyles?: TemplateStringsArray | CSSObject
+}
+
+const AppLinkInner = styled(AppBox)<OwnProps>`
+  transition: filter 0.2s ease, opacity 0.2s ease, color 0.3s ease;
+  &:hover {
+    cursor: pointer;
+    ${props =>
+      props.applyFilterOnHover &&
+      css`
+        filter: brightness(80%);
+      `};
+  }
+  ${props =>
+    props.applyActiveLinkStyles &&
+    css`
+      color: ${props => props.theme.colors.link};
+      ${props => (props as any).activeLinkStyles && css((props as any).activeLinkStyles)};
+    `}
 `
 
-const AppLink = React.forwardRef<any, AppBoxProps>((props, ref) => {
-  return <AppLinkInner ref={ref} as="a" fontFamily="body" lineHeight={LineHeight.Base} {...props} />
-})
+type Props = OwnProps & Omit<AppBoxProps, 'as'> & LinkProps
+
+const AppLink = React.forwardRef<any, Props>(
+  (
+    {
+      href,
+      as,
+      replace,
+      scroll,
+      shallow,
+      prefetch,
+      applyActiveLinkStyles,
+      activeLinkStyles,
+      applyFilterOnHover = true,
+      passHref = true,
+      ...rest
+    },
+    ref,
+  ) => {
+    return (
+      <Link
+        href={href}
+        as={as}
+        replace={replace}
+        scroll={scroll}
+        shallow={shallow}
+        passHref={passHref}
+        prefetch={prefetch}
+      >
+        <AppLinkInner
+          applyActiveLinkStyles={applyActiveLinkStyles}
+          activeLinkStyles={activeLinkStyles}
+          applyFilterOnHover={applyFilterOnHover}
+          css={{ textDecoration: 'none' }}
+          fontWeight={FontWeight.Semibold}
+          ref={ref}
+          as="a"
+          fontFamily="body"
+          color="link"
+          lineHeight={LineHeight.Base}
+          {...rest}
+        />
+      </Link>
+    )
+  },
+)
 
 AppLink.displayName = 'AppLink'
 

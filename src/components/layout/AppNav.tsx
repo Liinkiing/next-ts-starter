@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import AppLink from '~/ui/typography/AppLink'
 import AppBox from '~/ui/AppBox'
 
@@ -7,14 +6,10 @@ const AppNav: React.FC = () => (
   <AppBox as="nav" p={4}>
     <AppBox as="ul" display="flex">
       <AppBox as="li" marginRight={2}>
-        <Link href="/">
-          <AppLink>Home</AppLink>
-        </Link>
+        <AppLink href="/">Home</AppLink>
       </AppBox>
       <AppBox as="li" marginRight={2}>
-        <Link href="/about">
-          <AppLink>About</AppLink>
-        </Link>
+        <AppLink href="/about">About</AppLink>
       </AppBox>
     </AppBox>
   </AppBox>
