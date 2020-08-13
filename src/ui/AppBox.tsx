@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import {
+  shadow,
+  ShadowProps,
   border,
   BorderProps,
   color,
@@ -124,6 +126,7 @@ interface AppLetterSpacing {
 type AppTypographyProps = Omit<TypographyProps, 'fontWeight' | 'lineHeight' | 'fontSize' | 'letterSpacing'>
 
 type StyledSystemProps = ColorProps &
+  ShadowProps &
   SpaceProps &
   LayoutProps &
   FlexboxProps &
@@ -162,6 +165,7 @@ const AppBox = styled('div').withConfig({
   props => ({
     textTransform: props.uppercase ? 'uppercase' : undefined,
   }),
+  shadow,
   color,
   space,
   layout,
