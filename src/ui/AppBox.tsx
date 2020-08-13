@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { DefaultTheme, css } from 'styled-components'
 import {
   shadow,
   ShadowProps,
@@ -139,7 +139,10 @@ type ModifiedStyledSystemProps = AppFontSize & AppLetterSpacing & AppFontWeight 
 
 interface CustomBoxProps {
   readonly uppercase?: boolean
-  readonly css?: any
+  readonly css?:
+    | ((props: { theme: DefaultTheme } & Record<string, any>) => Record<string, unknown>)
+    | ReturnType<typeof css>
+    | Record<string, unknown>
   readonly ref?: any
 }
 
