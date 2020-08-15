@@ -63,11 +63,11 @@ const AppLink = React.forwardRef<any, Props>(
           css={{ textDecoration: 'none' }}
           fontWeight={FontWeight.Semibold}
           ref={ref}
-          as="a"
           fontFamily="body"
           color="link"
           lineHeight={LineHeight.Base}
           {...rest}
+          as="a"
         />
       </Link>
     )
