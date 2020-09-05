@@ -1,5 +1,5 @@
-import React from 'react'
-import AppBox, { AppBoxProps, FontSize } from '~/ui/AppBox'
+import * as React from 'react'
+import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
 import { ResponsiveValue } from 'styled-system'
 
 export enum HeadingSize {
@@ -20,18 +20,19 @@ const sizes: { [Key in Size]: ResponsiveValue<string | FontSize> } = {
   xs: FontSize.Sm,
 }
 
-type Props = Omit<AppBoxProps, 'size'> & {
+type Props = Omit<AppBoxOwnProps, 'size' | 'as'> & {
+  readonly as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
   readonly size?: HeadingSize | Size
 }
 
-const Heading = React.forwardRef<any, Props>(({ children, size = 'xl', ...rest }, ref) => {
+const Heading = React.forwardRef<any, Props>(({ children, size = 'xl', as = 'h2', ...rest }, ref) => {
   return (
     <AppBox
       ref={ref}
-      as="h2"
       lineHeight="shorter"
       fontWeight="bold"
       fontFamily="heading"
+      as={as}
       fontSize={sizes[size]}
       {...rest}
     >
@@ -42,4 +43,4 @@ const Heading = React.forwardRef<any, Props>(({ children, size = 'xl', ...rest }
 
 Heading.displayName = 'Heading'
 
-export default Heading
+export default Heading as PolymorphicComponent<Props>
