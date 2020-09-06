@@ -1,0 +1,6 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "video": true,
+  "screenshotOnRunFailure": true,
+  "videoUploadOnPasses": true
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "fixturesFolder": "./fixtures",
+  "integrationFolder": "./integration",
+  "pluginsFile": "./plugins/index.ts",
+  "screenshotsFolder": "./screenshots",
+  "videosFolder": "./videos",
+  "supportFile": "./support/index.ts",
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "retries": 2
+}

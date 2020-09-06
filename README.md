@@ -20,6 +20,9 @@ $ yarn start
 $ yarn test
 # launch test suite
 
+$ yarn cy:open
+# open cypress (you first need to install deps in cypress folder)
+
 $ yarn ts:check
 # check TypeScript
 
@@ -66,6 +69,20 @@ with [ts-jest](https://github.com/kulshekhar/ts-jest) so your tests also checks 
 You can look the **jest.config.js** and the file **setupTest.ts** to see what's in there.
 [jest-styled-components](https://github.com/styled-components/jest-styled-components) is also used to have deterministic classNames
 within your styled components that you are testing.
+[Cypress](https://cypress.io) starter for e2e tests. Take a look at Cypress config file **cypress.json**
+
+### Cypress
+
+This starter comes by default with [Cypress](https://cypress.io) and some sensible defaults and a custom plugin which enable you to
+inject your .env\* files in the Cypress.env helper. It also add support for a per-environment configuration file.
+Just add a cypress.<env>.json. It uses by default the `cypress.json` and then extend the configuration if you have
+a `cypress.<env>.json`. Take a look at the various configuration file in the `cypress` folder and the custom plugin in `cypress/plugins/index.ts`.
+This folder is independant and lives by itself, so it has his own dependencies / scripts / tsconfig and do not pollute the
+global namespace. [See why an isolated folder](https://basarat.gitbook.io/typescript/intro-1/cypress#tip-creating-page-objects)
+
+It also have an opiniated way of interacting with some of your webpages in Cypress. As your application
+will grow (and pages would become complex), it's recommended to have some sort of "Page objects" which allows
+you to work in a more conveniant way for some complex page. See more here https://basarat.gitbook.io/typescript/intro-1/cypress#tip-creating-page-objects
 
 ## Aliases
 
