@@ -66,6 +66,7 @@ with [ts-jest](https://github.com/kulshekhar/ts-jest) so your tests also checks 
 You can look the **jest.config.js** and the file **setupTest.ts** to see what's in there.
 [jest-styled-components](https://github.com/styled-components/jest-styled-components) is also used to have deterministic classNames
 within your styled components that you are testing.
+[Cypress](https://cypress.io) starter for e2e tests. Take a look at Cypress config file **cypress.json**
 
 ## Aliases
 
