@@ -1,0 +1,24 @@
+{
+  "name": "next-ts-starter-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cross-env NODE_ENV=development cypress run",
+    "cy:run:ci": "cross-env NODE_ENV=ci cypress run"
+  },
+  "keywords": [],
+  "author": "Omar Jbara",
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "cypress": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "typescript": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/node": "^14.6.2",
+    "cypress-intellij-reporter": "^0.0.4"
+  }
+}
