@@ -78,7 +78,7 @@ inject your .env\* files in the Cypress.env helper. It also add support for a pe
 Just add a cypress.<env>.json. It uses by default the `cypress.json` and then extend the configuration if you have
 a `cypress.<env>.json`. Take a look at the various configuration file in the `cypress` folder and the custom plugin in `cypress/plugins/index.ts`.
 This folder is independant and lives by itself, so it has his own dependencies / scripts / tsconfig and do not pollute the
-global namespace. [See why an isolated folder](https://basarat.gitbook.io/typescript/intro-1/cypress#tip-creating-page-objects)
+global namespace. [See why an isolated folder](https://basarat.gitbook.io/typescript/intro-1/cypress#installation)
 
 It also have an opiniated way of interacting with some of your webpages in Cypress. As your application
 will grow (and pages would become complex), it's recommended to have some sort of "Page objects" which allows
