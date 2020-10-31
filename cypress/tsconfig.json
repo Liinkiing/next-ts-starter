@@ -9,6 +9,12 @@
     "typeRoots": ["@types"],
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "~e2e/*": ["./*"],
+      "~/*": ["../src/*"],
+      "~pages/*": ["./pages/*"]
+    }
   }
 }
