@@ -1765,6 +1765,13 @@
   dependencies:
     csstype "^3.0.2"
 
+"@types/styled-system__css@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@types/styled-system__css/-/styled-system__css-5.0.14.tgz#97559d823216d475f716fb5b8dd1766f2d3eeafa"
+  integrity sha512-dvhSQ5upz6TqiQmWLNF0sqdoL5nTomza58vtTSklpE9lDS+5w/ew8PQ+HPSRaXMGrmPGUiL7F0vwryVdxHWfpA==
+  dependencies:
+    csstype "^3.0.2"
+
 "@types/styled-system__should-forward-prop@^5.1.2":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@types/styled-system__should-forward-prop/-/styled-system__should-forward-prop-5.1.2.tgz#57a71acb9c85bdd6e47cbb7f645037c6858c1ee7"

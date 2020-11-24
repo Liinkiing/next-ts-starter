@@ -66,6 +66,7 @@
     "@types/react-dom": "^16.9.9",
     "@types/styled-components": "^5.1.4",
     "@types/styled-system": "^5.1.10",
+    "@types/styled-system__css": "^5.0.14",
     "@types/styled-system__should-forward-prop": "^5.1.2",
     "@types/webpack": "^4.41.24",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
