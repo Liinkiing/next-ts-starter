@@ -29,7 +29,7 @@ const AppLinkInner = styled(AppBox)<OwnProps>`
 
 type Props = OwnProps & Omit<AppBoxProps, 'as'> & LinkProps
 
-const AppLink = React.forwardRef<any, Props>(
+const AppLink = React.forwardRef<HTMLElement, Props>(
   (
     {
       href,

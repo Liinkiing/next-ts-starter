@@ -56,6 +56,13 @@ to be aware of your theme and then build something amazing with the primitives.
 By default, this starter provides some basic examples components that uses this pattern, for
 example the `AppNav` component (`~/components/layout/AppNav`).
 
+🔥 It also supports and provides autocomplete for props that takes source from the theme (e.g `bg`, `zIndex`, `border`...). 🔥
+
+**TypeScript > 4.1** is mandatory because I'm using the new [Template Litteral Types](https://devblogs.microsoft.com/typescript/announcing-typescript-4-1-beta/#template-literal-types) to
+provide autocompletion of the color prop based of the nested `colors` object, so when using
+`bg` prop for exemple, you should have autocompletion for `red.xxx, blue.xxx` or anything defined in your `colors.ts`.
+It supports nested elements with a dot notation! (that's why TS 4.1 is required)
+
 ## Framer motion
 
 Again, personal preference here, but the starter comes with framer motion already configured

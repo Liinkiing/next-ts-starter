@@ -1,10 +1,31 @@
 import React from 'react'
-import AppBox, { AppBoxOwnProps, LineHeight, PolymorphicAppBox } from '~/ui/AppBox'
+import AppBox, { AppBoxOwnProps, LineHeight, PolymorphicComponent } from '~/ui/AppBox'
+import jsxInnerText from '~/utils/jsx'
 
-const Text = React.forwardRef<any, AppBoxOwnProps>((props, ref) => {
-  return <AppBox ref={ref} as="p" fontFamily="body" lineHeight={LineHeight.Base} {...props} />
+type Props = AppBoxOwnProps & {
+  readonly truncate?: number
+}
+
+const Text = React.forwardRef<HTMLElement, Props>(({ children, truncate, ...props }, ref) => {
+  let content = children
+  const innerText = jsxInnerText(content)
+  if (truncate && innerText.length > truncate) {
+    content = `${innerText.slice(0, truncate)}…`
+  }
+  return (
+    <AppBox
+      ref={ref}
+      as="p"
+      fontFamily="body"
+      {...(truncate ? { title: innerText } : {})}
+      lineHeight={LineHeight.Base}
+      {...props}
+    >
+      {content}
+    </AppBox>
+  )
 })
 
 Text.displayName = 'Text'
 
-export default Text as PolymorphicAppBox
+export default Text as PolymorphicComponent<Props>
