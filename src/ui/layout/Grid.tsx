@@ -1,6 +1,6 @@
 import * as React from 'react'
 import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
-import { GridProps } from 'styled-system'
+import { GridProps as StyledGridProps } from 'styled-system'
 
 type AutoFillFitOptions = {
   min: string
@@ -8,23 +8,23 @@ type AutoFillFitOptions = {
 }
 
 export interface GridOptions {
-  templateColumns?: GridProps['gridTemplateColumns']
-  gap?: GridProps['gridGap']
-  rowGap?: GridProps['gridRowGap']
-  columnGap?: GridProps['gridColumnGap']
-  autoFlow?: GridProps['gridAutoFlow']
-  autoRows?: GridProps['gridAutoRows']
-  autoColumns?: GridProps['gridAutoColumns']
-  templateRows?: GridProps['gridTemplateRows']
-  templateAreas?: GridProps['gridTemplateAreas']
-  area?: GridProps['gridArea']
-  column?: GridProps['gridColumn']
-  row?: GridProps['gridRow']
+  templateColumns?: StyledGridProps['gridTemplateColumns']
+  gap?: StyledGridProps['gridGap']
+  rowGap?: StyledGridProps['gridRowGap']
+  columnGap?: StyledGridProps['gridColumnGap']
+  autoFlow?: StyledGridProps['gridAutoFlow']
+  autoRows?: StyledGridProps['gridAutoRows']
+  autoColumns?: StyledGridProps['gridAutoColumns']
+  templateRows?: StyledGridProps['gridTemplateRows']
+  templateAreas?: StyledGridProps['gridTemplateAreas']
+  area?: StyledGridProps['gridArea']
+  column?: StyledGridProps['gridColumn']
+  row?: StyledGridProps['gridRow']
   autoFit?: AutoFillFitOptions | boolean
   autoFill?: AutoFillFitOptions | boolean
 }
 
-type Props = Omit<
+export type GridProps = Omit<
   AppBoxProps,
   | 'templateColumns'
   | 'gap'
@@ -41,7 +41,7 @@ type Props = Omit<
 > &
   GridOptions
 
-const Grid = React.forwardRef<HTMLElement, Props>((props, ref) => {
+const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
   const {
     templateColumns,
     gap,
@@ -103,4 +103,4 @@ const Grid = React.forwardRef<HTMLElement, Props>((props, ref) => {
 
 Grid.displayName = 'Grid'
 
-export default Grid as PolymorphicComponent<Props>
+export default Grid as PolymorphicComponent<GridProps>

@@ -14,13 +14,13 @@ export interface FlexOptions {
   spacing?: number | string
 }
 
-type Props = Omit<
+export type FlexProps = Omit<
   AppBoxProps,
   'display' | 'flexDirection' | 'alignItems' | 'justifyContent' | 'flexWrap' | 'flexBasis' | 'flexGrow' | 'spacing'
 > &
   FlexOptions
 
-const Flex = React.forwardRef<HTMLElement, Props>((props, ref) => {
+const Flex = React.forwardRef<HTMLElement, FlexProps>((props, ref) => {
   const { direction = 'row', align, justify, wrap, basis, grow, spacing: userSpacing, ...rest } = props
   const theme = useTheme()
   const spacing = typeof userSpacing === 'number' ? theme.space[userSpacing] : userSpacing
@@ -38,11 +38,14 @@ const Flex = React.forwardRef<HTMLElement, Props>((props, ref) => {
                 (acc, value, index) => {
                   return {
                     ...acc,
-                    [`@media screen and (min-width: ${theme.breakpoints[index]})`]: {
-                      ...((direction[index + 1] ?? 'row') === 'row'
-                        ? { marginLeft: spacing, marginTop: 0 }
-                        : { marginTop: spacing, marginLeft: 0 }),
-                    },
+                    [`@media screen and (min-width: ${theme.breakpoints[index]})`]:
+                      direction[index + 1] === undefined
+                        ? {}
+                        : {
+                            ...((direction[index + 1] ?? 'row') === 'row'
+                              ? { marginLeft: spacing, marginTop: 0 }
+                              : { marginTop: spacing, marginLeft: 0 }),
+                          },
                   }
                 },
                 {
@@ -80,4 +83,4 @@ const Flex = React.forwardRef<HTMLElement, Props>((props, ref) => {
 
 Flex.displayName = 'Flex'
 
-export default Flex as PolymorphicComponent<Props>
+export default Flex as PolymorphicComponent<FlexProps>
