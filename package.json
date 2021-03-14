@@ -13,7 +13,8 @@
     "test:watch": "yarn test --watch",
     "cy:open": "yarn --cwd cypress cy:open",
     "cy:run": "yarn --cwd cypress cy:run",
-    "cy:run:cy": "yarn --cwd cypress cy:run:ci"
+    "cy:run:cy": "yarn --cwd cypress cy:run:ci",
+    "prepare": "husky install"
   },
   "keywords": [
     "starter",
@@ -82,11 +83,6 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{css,json,md}": [
