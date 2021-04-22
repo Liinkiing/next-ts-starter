@@ -1,7 +1,8 @@
-import React from 'react'
-import AppBox, { AppBoxProps, FontWeight, LineHeight } from '~/ui/AppBox'
-import styled, { css, CSSObject } from 'styled-components'
 import Link, { LinkProps } from 'next/link'
+import React from 'react'
+import styled, { css, CSSObject } from 'styled-components'
+
+import AppBox, { AppBoxProps, FontWeight, LineHeight } from '~/ui/AppBox'
 
 interface OwnProps {
   readonly applyActiveLinkStyles?: boolean

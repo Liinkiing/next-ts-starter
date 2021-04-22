@@ -1,8 +1,8 @@
 // https://github.com/sergiodxa/next-nprogress/blob/master/src/component.js
 // Was not working with last Styled Component version, so adapted it as a component directly
-import { Component } from 'react'
-import NProgressLib, { NProgressOptions } from 'nprogress'
 import Router from 'next/router'
+import NProgressLib, { NProgressOptions } from 'nprogress'
+import { Component } from 'react'
 
 interface Props {
   color?: string

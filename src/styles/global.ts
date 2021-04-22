@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+
 import bootstrap from '~/styles/bootstrap'
 import { MAIN_BACKGROUND } from '~/styles/modules/variables'
 import { theme } from '~/styles/themes'

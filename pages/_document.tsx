@@ -1,6 +1,6 @@
 import Document, { DocumentContext, Head, Main, Html, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
 import * as React from 'react'
+import { ServerStyleSheet } from 'styled-components'
 
 interface Props {
   styleTags: Array<React.ReactElement<unknown>>

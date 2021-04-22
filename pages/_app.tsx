@@ -1,9 +1,10 @@
-import React from 'react'
+import { AnimatePresence } from 'framer-motion'
 import App from 'next/app'
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import NProgress from '~/components/NProgress'
 import AppNav from '~/components/layout/AppNav'
-import { AnimatePresence } from 'framer-motion'
-import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '~/styles/global'
 import { light } from '~/styles/themes'
 

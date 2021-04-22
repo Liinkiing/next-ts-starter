@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-types */
-
 // Some values comes from chakra-ui, a great UI library!
-
 import type { DefaultTheme } from 'styled-components'
+
 import type { Breakpoints } from '~/@types/styled-components/theme'
+import colors from '~/styles/modules/colors'
 import { pxToRem } from '~/styles/modules/mixins'
 import typography from '~/styles/themes/typography'
-import colors from '~/styles/modules/colors'
 
 export const BR_TABLET = 720
 export const BR_DESKTOP = 1024

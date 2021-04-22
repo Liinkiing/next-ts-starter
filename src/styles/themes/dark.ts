@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'styled-components'
+
 import colors from '~/styles/modules/colors'
 import baseTheme from '~/styles/themes/base'
 

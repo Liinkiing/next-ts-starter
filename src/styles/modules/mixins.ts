@@ -1,4 +1,5 @@
 import { css, CSSObject, FlattenSimpleInterpolation } from 'styled-components'
+
 import colors from '~/styles/modules/colors'
 
 export const breakpoint = (

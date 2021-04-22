@@ -1,6 +1,7 @@
 import * as React from 'react'
-import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
 import { ResponsiveValue } from 'styled-system'
+
+import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
 import jsxInnerText from '~/utils/jsx'
 
 export enum HeadingSize {

@@ -1,6 +1,7 @@
 import React from 'react'
-import AppLink from '~/ui/typography/AppLink'
+
 import AppBox from '~/ui/AppBox'
+import AppLink from '~/ui/typography/AppLink'
 
 const AppNav: React.FC = () => (
   <AppBox as="nav" p={4}>

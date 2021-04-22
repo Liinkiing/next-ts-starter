@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'styled-components'
+
 import { default as dark } from './dark'
 import { default as light } from './light'
 

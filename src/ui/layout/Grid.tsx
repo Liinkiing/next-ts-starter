@@ -1,6 +1,7 @@
 import * as React from 'react'
-import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
 import { GridProps as StyledGridProps } from 'styled-system'
+
+import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
 
 type AutoFillFitOptions = {
   min: string

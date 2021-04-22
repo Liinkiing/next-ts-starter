@@ -1,7 +1,8 @@
-import React from 'react'
-import { NextPage } from 'next'
 import { motion } from 'framer-motion'
+import { NextPage } from 'next'
+import React from 'react'
 import styled from 'styled-components'
+
 import { DefaultRouterPageVariants } from '~/common/framer'
 import { BREAKPOINTS } from '~/styles/modules/variables'
 

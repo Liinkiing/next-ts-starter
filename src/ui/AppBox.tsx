@@ -1,3 +1,5 @@
+import shouldForwardProp from '@styled-system/should-forward-prop'
+import * as CSS from 'csstype'
 import type { HTMLAttributes, RefAttributes } from 'react'
 import React from 'react'
 import styled, { css, DefaultTheme } from 'styled-components'
@@ -23,7 +25,8 @@ import {
   typography,
   TypographyProps,
 } from 'styled-system'
-import shouldForwardProp from '@styled-system/should-forward-prop'
+
+import { ThemeColorsValues } from '~/styles/modules/colors'
 import {
   SPACES_SCALES,
   ThemeBordersValues,
@@ -31,8 +34,6 @@ import {
   ThemeShadowsValues,
   ThemeZIndicesValues,
 } from '~/styles/themes/base'
-import * as CSS from 'csstype'
-import { ThemeColorsValues } from '~/styles/modules/colors'
 import {
   ThemeFontSizesValues,
   ThemeFontFamiliesValue,

@@ -1,9 +1,10 @@
 import { NextPage } from 'next'
+
 import AppHead from '~/components/AppHead'
 import Page from '~/components/layout/Page'
 import AppBox from '~/ui/AppBox'
-import Text from '~/ui/typography/Text'
 import Heading from '~/ui/typography/Heading'
+import Text from '~/ui/typography/Text'
 
 const Index: NextPage = () => (
   <Page>
