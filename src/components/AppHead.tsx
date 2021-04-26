@@ -1,7 +1,7 @@
 import NextHead from 'next/head'
 import React from 'react'
 
-const defaultDescription = ''
+const defaultDescription = 'A starter made by https://github.com/Liinkiing'
 const defaultOGURL = ''
 const defaultOGImage = ''
 
