@@ -6,6 +6,9 @@ const dotenvLoad = require('dotenv-load')
 const withPlugins = require('next-compose-plugins')
 const withImages = require('next-images')
 const withFonts = require('next-fonts')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 dotenvLoad()
 
@@ -59,7 +62,7 @@ const securityHeaders = [
   },
 ]
 
-module.exports = withPlugins([withFonts, withImages], {
+module.exports = withPlugins([[withBundleAnalyzer], withFonts, withImages], {
   future: {
     webpack5: true,
   },
