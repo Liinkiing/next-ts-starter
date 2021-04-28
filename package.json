@@ -88,9 +88,9 @@
     "typescript": "^4.2.3"
   },
   "lint-staged": {
-    "*.{css,json,md}": [
-      "prettier --write"
-    ],
+    "*.md": ["npx prettier --parser markdown --write"],
+    "*.{css,scss,less}": ["npx prettier --parser css --write"],
+    "*.json": ["npx prettier --parser json --write"],
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix",
       "prettier --write",
