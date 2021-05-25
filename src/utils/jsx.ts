@@ -1,11 +1,10 @@
-import * as React from 'react'
-import { ReactElement } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 
-function hasProps(jsx: React.ReactNode): jsx is ReactElement {
+function hasProps(jsx: ReactNode): jsx is ReactElement {
   return Object.prototype.hasOwnProperty.call(jsx, 'props')
 }
 
-function jsxInnerText(jsx: React.ReactNode): string {
+function jsxInnerText(jsx: ReactNode): string {
   if (jsx === null || typeof jsx === 'boolean' || typeof jsx === 'undefined') {
     return ''
   }

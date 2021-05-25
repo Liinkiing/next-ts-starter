@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { ResponsiveValue } from 'styled-system'
+import { forwardRef } from 'react'
+import type { ResponsiveValue } from 'styled-system'
 
 import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
 import jsxInnerText from '~/utils/jsx'
@@ -28,7 +28,7 @@ type Props = Omit<AppBoxOwnProps, 'size' | 'as'> & {
   readonly truncate?: number
 }
 
-const Heading = React.forwardRef<any, Props>(({ children, truncate, size = 'xl', as = 'h2', ...rest }, ref) => {
+const Heading = forwardRef<any, Props>(({ children, truncate, size = 'xl', as = 'h2', ...rest }, ref) => {
   let content = children
   const innerText = jsxInnerText(content)
   if (truncate && innerText.length > truncate) {

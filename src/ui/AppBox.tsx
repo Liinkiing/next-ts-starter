@@ -1,7 +1,6 @@
 import shouldForwardProp from '@styled-system/should-forward-prop'
-import * as CSS from 'csstype'
+import type { Property } from 'csstype'
 import type { HTMLAttributes, RefAttributes } from 'react'
-import React from 'react'
 import styled, { css, DefaultTheme } from 'styled-components'
 import {
   border,
@@ -26,7 +25,7 @@ import {
   TypographyProps,
 } from 'styled-system'
 
-import { ThemeColorsValues } from '~/styles/modules/colors'
+import type { ThemeColorsValues } from '~/styles/modules/colors'
 import {
   SPACES_SCALES,
   ThemeBordersValues,
@@ -34,7 +33,7 @@ import {
   ThemeShadowsValues,
   ThemeZIndicesValues,
 } from '~/styles/themes/base'
-import {
+import type {
   ThemeFontSizesValues,
   ThemeFontFamiliesValue,
   ThemeFontWeightsValues,
@@ -131,7 +130,7 @@ type AppShadowProps = {
    *
    * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
    */
-  boxShadow?: ResponsiveValue<ThemeShadowsValues | CSS.Property.BoxShadow | number>
+  boxShadow?: ResponsiveValue<ThemeShadowsValues | Property.BoxShadow | number>
   /**
    * The `text-shadow` CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied
    * to the text and any of its `decorations`. Each shadow is described by some combination of X and Y offsets from
@@ -139,7 +138,7 @@ type AppShadowProps = {
    *
    * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
    */
-  textShadow?: ResponsiveValue<ThemeShadowsValues | CSS.Property.TextShadow | number>
+  textShadow?: ResponsiveValue<ThemeShadowsValues | Property.TextShadow | number>
 }
 
 type ColorsProps = ResponsiveValue<ThemeColorsValues>

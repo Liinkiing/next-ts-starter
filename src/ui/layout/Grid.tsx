@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { GridProps as StyledGridProps } from 'styled-system'
+import { forwardRef } from 'react'
+import type { GridProps as StyledGridProps } from 'styled-system'
 
 import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
 
@@ -42,7 +42,7 @@ export type GridProps = Omit<
 > &
   GridOptions
 
-const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
+const Grid = forwardRef<HTMLElement, GridProps>((props, ref) => {
   const {
     templateColumns,
     gap,

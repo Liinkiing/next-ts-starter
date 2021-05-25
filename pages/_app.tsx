@@ -1,6 +1,5 @@
 import { AnimatePresence } from 'framer-motion'
 import App from 'next/app'
-import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import NProgress from '~/components/NProgress'

@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-import { Breakpoints } from '~/@types/styled-components/theme'
+import type { Breakpoints } from '~/@types/styled-components/theme'
 import { theme } from '~/styles/themes'
 import { breakpoints } from '~/styles/themes/base'
 

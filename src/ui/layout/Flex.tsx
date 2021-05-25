@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FlexboxProps } from 'styled-system'
+import type { FlexboxProps } from 'styled-system'
 
 import useTheme from '~/hooks/useTheme'
 import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'

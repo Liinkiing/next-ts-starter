@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { NextPage } from 'next'
-import React from 'react'
+import type { NextPage } from 'next'
+import { createElement } from 'react'
 import styled from 'styled-components'
 
 import { DefaultRouterPageVariants } from '~/common/framer'
@@ -26,7 +26,7 @@ const PageInner = styled(motion.div)`
 `
 
 const Page: NextPage<Props> = ({ children, as = 'div', noDefaultTransition = false, ...rest }) =>
-  React.createElement(
+  createElement(
     // @ts-ignore
     motion[as],
     {
