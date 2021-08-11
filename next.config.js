@@ -62,9 +62,10 @@ const securityHeaders = [
   },
 ]
 
-module.exports = withPlugins([[withBundleAnalyzer], withFonts, withImages], {
-  future: {
-    webpack5: true,
+/** @type {import('next/dist/server/config-shared').NextConfig} */
+const nextConfig = {
+  experimental: {
+    esmExternals: true,
   },
   i18n: {
     locales: ['en'],
@@ -99,4 +100,6 @@ module.exports = withPlugins([[withBundleAnalyzer], withFonts, withImages], {
 
     return config
   },
-})
+}
+
+module.exports = withPlugins([[withBundleAnalyzer], withFonts, withImages], nextConfig)
