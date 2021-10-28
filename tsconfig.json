@@ -18,7 +18,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
-    }
+    },
+    "incremental": true
   },
   "exclude": ["node_modules", "cypress"],
   "include": ["next-env.d.ts", "globals.d.ts", "**/*.ts", "**/*.tsx"]
