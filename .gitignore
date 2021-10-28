@@ -18,6 +18,7 @@
 .DS_Store
 *.pem
 .eslintcache
+tsconfig.tsbuildinfo
 
 # debug
 npm-debug.log*
