@@ -12,6 +12,7 @@ interface Props {
 }
 
 export default class NProgress extends Component<Props> {
+  // eslint-disable-next-line prettier/prettier
   static defaultProps = {
     color: '#2299DD',
     showAfterMs: 300,
@@ -76,7 +77,7 @@ export default class NProgress extends Component<Props> {
         #nprogress .peg {
           display: block;
           position: absolute;
-          right: 0px;
+          right: 0;
           width: 100px;
           height: 100%;
           box-shadow: 0 0 10px ${color}, 0 0 5px ${color};
