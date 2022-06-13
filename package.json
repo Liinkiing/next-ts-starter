@@ -8,7 +8,7 @@
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "lint": "eslint --no-error-on-unmatched-pattern --cache --fix --report-unused-disable-directives {src,pages}/**/*.{js,ts,jsx,tsx}",
-    "ts:check": "tsc --noEmit",
+    "ts:check": "tsc --noEmit --skipLibCheck --pretty",
     "test": "jest --runInBand --coverage=false",
     "test:ci": "yarn test --ci",
     "test:watch": "yarn test --watch",
@@ -40,6 +40,7 @@
   },
   "author": "Omar Jbara <omar.jbara2@gmail.com>",
   "dependencies": {
+    "@jest/globals": "^27.3.1",
     "@next/bundle-analyzer": "^12.0.1",
     "@styled-system/should-forward-prop": "^5.1.5",
     "@testing-library/jest-dom": "^5.14.1",
@@ -62,8 +63,8 @@
     "ts-jest": "^27.0.7"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^12.0.1",
-    "@trivago/prettier-plugin-sort-imports": "^3.0.0",
+    "@liinkiing/eslint-config": "^1.2.10",
+    "@liinkiing/prettier-config": "^1.3.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "@types/nprogress": "^0.2.0",
@@ -74,24 +75,27 @@
     "@types/styled-system__css": "^5.0.16",
     "@types/styled-system__should-forward-prop": "^5.1.2",
     "@types/webpack": "^5.28.0",
-    "@typescript-eslint/eslint-plugin": "^5.2.0",
-    "@typescript-eslint/parser": "^5.2.0",
     "babel-plugin-styled-components": "^1.13.3",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^3.4.1",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint": "^8.17.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
-    "prettier": "^2.4.1",
+    "prettier": "^2.6.2",
     "typescript": "^4.4.4"
   },
+  "resolutions": {
+    "@types/react": "^17.0.33"
+  },
+  "prettier": "@liinkiing/prettier-config",
   "lint-staged": {
-    "*.md": ["npx prettier --parser markdown --write"],
-    "*.{css,scss,less}": ["npx prettier --parser css --write"],
-    "*.json": ["npx prettier --parser json --write"],
+    "*.md": [
+      "npx prettier --parser markdown --write"
+    ],
+    "*.{css,scss,less}": [
+      "npx prettier --parser css --write"
+    ],
+    "*.json": [
+      "npx prettier --parser json --write"
+    ],
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix",
       "prettier --write",

@@ -1,6 +1,7 @@
 import React from 'react'
 
-import AppBox, { AppBoxOwnProps, LineHeight, PolymorphicComponent } from '~/ui/AppBox'
+import type { AppBoxOwnProps, PolymorphicComponent } from '~/ui/AppBox'
+import AppBox, { LineHeight } from '~/ui/AppBox'
 import jsxInnerText from '~/utils/jsx'
 
 type Props = AppBoxOwnProps & {

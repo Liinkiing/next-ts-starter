@@ -1,38 +1,41 @@
 import shouldForwardProp from '@styled-system/should-forward-prop'
 import type { Property } from 'csstype'
 import type { HTMLAttributes, RefAttributes } from 'react'
-import styled, { css, DefaultTheme } from 'styled-components'
-import {
-  border,
+import type { css, DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
+import type {
   BorderProps,
-  color,
   ColorProps,
-  compose,
-  flexbox,
   FlexboxProps,
-  grid,
   GridProps,
-  layout,
   LayoutProps,
-  position,
   PositionProps,
   ResponsiveValue,
+  SpaceProps,
+  TypographyProps,
+} from 'styled-system'
+import {
+  border,
+  color,
+  compose,
+  flexbox,
+  grid,
+  layout,
+  position,
   shadow,
   space,
-  SpaceProps,
   system,
   typography,
-  TypographyProps,
 } from 'styled-system'
 
 import type { ThemeColorsValues } from '~/styles/modules/colors'
-import {
-  SPACES_SCALES,
+import type {
   ThemeBordersValues,
   ThemeRadiiValues,
   ThemeShadowsValues,
   ThemeZIndicesValues,
 } from '~/styles/themes/base'
+import { SPACES_SCALES } from '~/styles/themes/base'
 import type {
   ThemeFontSizesValues,
   ThemeFontFamiliesValue,
@@ -117,6 +120,14 @@ type AppTypographyProps = Omit<
   TypographyProps,
   'fontFamily' | 'fontWeight' | 'lineHeight' | 'fontSize' | 'letterSpacing'
 >
+
+type StyledSystemProps = ColorProps &
+  BorderProps &
+  SpaceProps &
+  LayoutProps &
+  FlexboxProps &
+  GridProps &
+  Omit<PositionProps, 'zIndex'>
 
 type AppCustomStyledProps = {
   minSize?: StyledSystemProps['size']
@@ -250,14 +261,6 @@ type AppPositionProps = {
    */
   zIndex?: ResponsiveValue<ThemeZIndicesValues>
 }
-
-type StyledSystemProps = ColorProps &
-  BorderProps &
-  SpaceProps &
-  LayoutProps &
-  FlexboxProps &
-  GridProps &
-  Omit<PositionProps, 'zIndex'>
 
 type ModifiedStyledSystemProps = AppBorderProps &
   AppTypographyProps &

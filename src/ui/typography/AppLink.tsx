@@ -1,8 +1,11 @@
-import Link, { LinkProps } from 'next/link'
+import type { LinkProps } from 'next/link'
+import Link from 'next/link'
 import React from 'react'
-import styled, { css, CSSObject } from 'styled-components'
+import type { CSSObject } from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import AppBox, { AppBoxProps, FontWeight, LineHeight } from '~/ui/AppBox'
+import type { AppBoxProps } from '~/ui/AppBox'
+import AppBox, { FontWeight, LineHeight } from '~/ui/AppBox'
 
 interface OwnProps {
   readonly applyActiveLinkStyles?: boolean
@@ -23,8 +26,8 @@ const AppLinkInner = styled(AppBox)<OwnProps>`
   ${props =>
     props.applyActiveLinkStyles &&
     css`
-      color: ${props => props.theme.colors.link};
-      ${props => (props as any).activeLinkStyles && css((props as any).activeLinkStyles)};
+      color: ${props.theme.colors.link};
+      ${(props as any).activeLinkStyles && css((props as any).activeLinkStyles)};
     `}
 `
 

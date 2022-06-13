@@ -1,7 +1,8 @@
 // https://github.com/sergiodxa/next-nprogress/blob/master/src/component.js
 // Was not working with last Styled Component version, so adapted it as a component directly
 import Router from 'next/router'
-import NProgressLib, { NProgressOptions } from 'nprogress'
+import type { NProgressOptions } from 'nprogress'
+import NProgressLib from 'nprogress'
 import { Component } from 'react'
 
 interface Props {
@@ -12,7 +13,6 @@ interface Props {
 }
 
 export default class NProgress extends Component<Props> {
-  // eslint-disable-next-line prettier/prettier
   static defaultProps = {
     color: '#2299DD',
     showAfterMs: 300,
@@ -20,21 +20,6 @@ export default class NProgress extends Component<Props> {
   }
 
   timer: number | null = null
-
-  routeChangeStart = () => {
-    const { showAfterMs } = this.props
-    if (this.timer) {
-      clearTimeout(this.timer)
-    }
-    this.timer = setTimeout(NProgressLib.start, showAfterMs)
-  }
-
-  routeChangeEnd = () => {
-    if (this.timer) {
-      clearTimeout(this.timer)
-    }
-    NProgressLib.done()
-  }
 
   componentDidMount() {
     const { options } = this.props
@@ -50,11 +35,26 @@ export default class NProgress extends Component<Props> {
 
   componentWillUnmount() {
     if (this.timer) {
-      clearTimeout(this.timer)
+      window.clearTimeout(this.timer)
     }
     Router.events.off('routeChangeStart', this.routeChangeStart)
     Router.events.off('routeChangeComplete', this.routeChangeEnd)
     Router.events.off('routeChangeError', this.routeChangeEnd)
+  }
+
+  routeChangeStart = () => {
+    const { showAfterMs } = this.props
+    if (this.timer) {
+      window.clearTimeout(this.timer)
+    }
+    this.timer = window.setTimeout(NProgressLib.start, showAfterMs)
+  }
+
+  routeChangeEnd = () => {
+    if (this.timer) {
+      window.clearTimeout(this.timer)
+    }
+    NProgressLib.done()
   }
 
   render() {

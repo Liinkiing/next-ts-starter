@@ -1,7 +1,8 @@
 import { forwardRef } from 'react'
 import type { GridProps as StyledGridProps } from 'styled-system'
 
-import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import type { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import AppBox from '~/ui/AppBox'
 
 type AutoFillFitOptions = {
   min: string

@@ -1,7 +1,8 @@
 import { forwardRef } from 'react'
 import type { ResponsiveValue } from 'styled-system'
 
-import AppBox, { AppBoxOwnProps, FontSize, PolymorphicComponent } from '~/ui/AppBox'
+import type { AppBoxOwnProps, PolymorphicComponent } from '~/ui/AppBox'
+import AppBox, { FontSize } from '~/ui/AppBox'
 import jsxInnerText from '~/utils/jsx'
 
 export enum HeadingSize {

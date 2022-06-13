@@ -14,7 +14,7 @@ interface Props {
 
 const AppHead: React.FC<Props> = ({ title, description, url, socialImage }) => (
   <NextHead>
-    <meta key="charset" charSet="UTF-8" />
+    <meta key="charset" charSet="utf8" />
     <title>{title}</title>
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="/manifest.json" />

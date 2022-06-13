@@ -2,7 +2,8 @@ import * as React from 'react'
 import type { FlexboxProps } from 'styled-system'
 
 import useTheme from '~/hooks/useTheme'
-import AppBox, { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import type { AppBoxProps, PolymorphicComponent } from '~/ui/AppBox'
+import AppBox from '~/ui/AppBox'
 
 export interface FlexOptions {
   align?: FlexboxProps['alignItems']
